@@ -109,7 +109,7 @@ class StyleFrame:
             content_img = cv2.imread(filename) 
             content_img = cv2.cvtColor(content_img, cv2.COLOR_BGR2RGB) / self.MAX_CHANNEL_INTENSITY
             curr_style_img_index = int(count / self.t_const)
-            mix_ratio = 0.1
+            mix_ratio = 1
             inv_mix_ratio = 1 - mix_ratio
 
             prev_image = self.transition_style_seq[curr_style_img_index]
